@@ -1,6 +1,8 @@
 package com.yinlu.bi.portal.admin.model;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.yinlu.bi.portal.common.model.BaseModel;
 import java.io.Serializable;
@@ -13,7 +15,8 @@ import lombok.Data;
 @Data
 public class SystemReportService extends BaseModel implements Serializable {
   /** */
-  @TableField(value = "RId")
+//  @TableField(value = "RId")
+  @TableId(value = "RId",type = IdType.AUTO)
   private Integer RId;
 
   /** */

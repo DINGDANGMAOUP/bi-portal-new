@@ -15,9 +15,16 @@
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <bi.version>1.0.0-SNAPSHOT</bi.version>
         <jwt.version>0.9.1</jwt.version>
+        <druid.version>1.2.5</druid.version>
+        <mybatis-plus.version>3.4.2</mybatis-plus.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.yinlu</groupId>
             <artifactId>bi-portal-common</artifactId>
@@ -53,7 +60,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.2</version>
+            <version>${mybatis-plus.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>

@@ -26,7 +26,6 @@ public class MenuServiceImpl implements MenuService {
   public List<SystemReportService> listByName(String name) {
     List<SystemReportService> sysMenus = new ArrayList<>();
     List<SystemReportService> menus = findTreeByName(name);
-//    List<SystemReportService> menus=systemReportServiceService.listByName(name);
     menus.forEach(
         menu -> {
           if (menu.getRPId() == Constants.LEVEL) {
@@ -36,7 +35,6 @@ public class MenuServiceImpl implements MenuService {
             }
           }
         });
-//    sysMenus.sort((o1, o2) -> o1.getRSort().compareTo(o2.getRSort()));
     findChildren(sysMenus, menus);
     return sysMenus;
   }
@@ -98,11 +96,11 @@ public class MenuServiceImpl implements MenuService {
 
   /**
    * 查询子菜单
-   * @param SysMenus
+   * @param sysMenus
    * @param menus
    */
-  private void findChildren(List<SystemReportService> SysMenus, List<SystemReportService> menus) {
-    SysMenus.forEach(
+  private void findChildren(List<SystemReportService> sysMenus, List<SystemReportService> menus) {
+    sysMenus.forEach(
         sysMenu -> {
           List<SystemReportService> children = new ArrayList<>();
           menus.forEach(

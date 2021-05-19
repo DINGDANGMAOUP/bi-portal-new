@@ -1,6 +1,8 @@
 package com.yinlu.bi.portal.admin.model;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.yinlu.bi.portal.common.model.BaseModel;
 import java.io.Serializable;
@@ -17,7 +19,8 @@ public class SystemUserGroup extends BaseModel implements Serializable {
     /**
      * 
      */
-    @TableField(value = "GroupId")
+//    @TableField(value = "GroupId")
+    @TableId(value = "GroupId",type = IdType.AUTO)
     private Integer groupId;
 
     /**
